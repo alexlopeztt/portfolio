@@ -51,7 +51,7 @@
     document.getElementById('romanNum').innerHTML = romans[number - 1];<br />
 }</p>
 
-  <p>Enter a number between 1 and 10.</p><br />
+  <label for="num">Enter a number between 1 and 10.</label><br />
   <input type="text" id="num" />
     <br /><br />
   <input type="button" value="Convert" onclick="convert()" />
@@ -68,7 +68,7 @@
     document.getElementById('tempKel').innerHTML = kel + 'K';<br />
 }</p>
   
-  <p>Enter a temperature you want to convert.</p>
+  <label for="tempFahr">Enter a temperature you want to convert.</label>
   <input type="text" id="tempFahr" size="10" />
   <p id="F">&#x2109</p>
     <br />
@@ -91,7 +91,7 @@
     }<br />
 }</p>
 
-    <p>Pick a number between 1 and 20.</p>
+    <label for="userNum">Pick a number between 1 and 20.</label>
     <input type="text" id="userNum" />
     <input type="button" value="Check" onclick="chkSecret()" />
     <p id="response"></p>
