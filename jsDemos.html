@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Alex's Portfolio</title>
+  <title>Alex's JavaScript</title>
   <link rel="stylesheet" href="style.css">
   <script src="jquery-3.2.1.slim.min.js"></script>
   <meta charset="UTF-8">
@@ -12,152 +12,168 @@
   <nav id="Nav">
     <ul>
 	  <li><a href="index.html"><p>Home</p></a></li>
-	  <li><a href="#"><p>Resume</p></a></li>
-	  <li><a href="#"><p>Contact</p></a></li>
-	  <li><a href="#"><p>Courses</p></a></li>
-	  <li><a href="jsDemos.html"><p>Projects</p></a></li>
+	  <li><a href="resume.html"><p>Resume</p></a></li>
+	  <li><a href="contact.html"><p>Contact</p></a></li>
+	  <li><a href="courses.html"><p>Courses</p></a></li>
+	  <li><a href="#"><p>Projects</p></a></li>
 	</ul>
   </nav>
   
   <!-- JS Demos -->
   <h1 id="Header">Javascript Demonstration</h1>
   
-<div class="smartBox">
-  <!-- greetings -->
-  <h2>Greetings</h2>
-  <p class="fade">function greet(){<br />
-    var fName = document.getElementById('firstName').value;<br />
-    var lName = document.getElementById('lastName').value;<br />
-    document.getElementById('greetings').innerHTML = 'Hello, ' + fName + ' ' + lName + ' ,and welcome to my website';<br />
-    return false;<br />
-}
+  <div class="smartBox">
+    <!-- greetings -->
+    <h2>Greetings</h2>
+    <p class="fade">function greet(){<br />
+      var fName = document.getElementById('firstName').value;<br />
+      var lName = document.getElementById('lastName').value;<br />
+      document.getElementById('greetings').innerHTML = 'Hello, ' + fName + ' ' + lName + ' ,and welcome to my website';<br />
+      return false;<br />
+      }
     </p>
 	<label for="firstName">First name:</label><br/>
-	<input type="text" id="firstName">
-	<br>
+	  <input type="text" id="firstName">
+	  <br>
 	<label for="lastName">Last name:</label><br>
-	<input type="text" id="lastName">
-	<br><br>
+	  <input type="text" id="lastName">
+	  <br><br>
 	<input type="submit" value="Submit" onclick="greet()">
-  <p id="greetings"></p>
-</div>
+    <p id="greetings"></p>
+  </div>
 
-<div class="box">
-  <!--Roman Conversion-->
-  <h2>Roman Conversion</h2>
-  <p class="fade">function convert(){<br />
-    var number = document.getElementById('num').value;<br />
-    var romans = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];<br />
-    document.getElementById('romanNum').innerHTML = romans[number - 1];<br />
-}</p>
+  <div class="box">
+    <!--Roman Conversion-->
+    <h2>Roman Conversion</h2>
+    <p class="fade">function convert(){<br />
+      var number = document.getElementById('num').value;<br />
+      var romans = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];<br />
+      document.getElementById('romanNum').innerHTML = romans[number - 1];<br />
+      }
+    </p>
 
-  <label for="num">Enter a number between 1 and 10.</label><br />
-  <input type="text" id="num" />
-    <br /><br />
-  <input type="button" value="Convert" onclick="convert()" />
-  <p id="romanNum"></p>
-</div>
+    <label for="num">Enter a number between 1 and 10.</label><br />
+      <input type="text" id="num" />
+      <br /><br />
+    <input type="button" value="Convert" onclick="convert()" />
+    <p id="romanNum"></p>
+  </div>
 
-<div class="box">
-  <!--Kelvin Conversion-->
-  <h2>Kelvin Converter</h2>
-  <p class="fade">function conKel() {<br />
-    var fahr = document.getElementById('tempFahr').value;<br />
-    var fahrNum = Number(fahr);<br />
-    var kel = ((fahrNum - 32) / 1.8) + 273;<br />
-    document.getElementById('tempKel').innerHTML = kel + 'K';<br />
-}</p>
+  <div class="box">
+    <!--Kelvin Conversion-->
+    <h2>Kelvin Converter</h2>
+    <p class="fade">function conKel() {<br />
+      var fahr = document.getElementById('tempFahr').value;<br />
+      var fahrNum = Number(fahr);<br />
+      var kel = ((fahrNum - 32) / 1.8) + 273;<br />
+      document.getElementById('tempKel').innerHTML = kel + 'K';<br />
+      }
+    </p>
   
-  <label for="tempFahr">Enter a temperature you want to convert.</label>
-  <input type="text" id="tempFahr" size="10" />
-  <p id="F">&#x2109</p>
+    <label for="tempFahr">Enter a temperature you want to convert.</label>
+      <input type="text" id="tempFahr" size="10" />
+    <p id="F">&#x2109</p>
     <br />
-  <input type="button" value="Convert" onclick="conKel()" />
-  <p id="tempKel"></p>
-</div>
+    <input type="button" value="Convert" onclick="conKel()" />
+    <p id="tempKel"></p>
+  </div>
 
-<div class="box">
+  <div class="box">
     <!--Secret Number-->
     <h2>Secret Number Game</h2>
     <p class="fade">function chkSecret() {<br />
-    var inNum = document.getElementById('userNum').value;<br />
-    <br />
-    if (inNum > 12) {<br />
+      var inNum = document.getElementById('userNum').value;<br />
+      <br />
+      if (inNum > 12) {<br />
         document.getElementById('response').innerHTML = 'Your too high. Try again.';<br />
-    } else if (inNum < 12) {<br />
+      } else if (inNum < 12) {<br />
         document.getElementById('response').innerHTML = 'Your too low. Try again';<br />
-    } else {<br />
+      } else {<br />
         document.getElementById('response').innerHTML = 'Congrats! You won!';<br />
-    }<br />
-}</p>
+      }<br />
+      }
+    </p>
 
     <label for="userNum">Pick a number between 1 and 20.</label>
-    <input type="text" id="userNum" />
+      <input type="text" id="userNum" />
     <input type="button" value="Check" onclick="chkSecret()" />
     <p id="response"></p>
-</div>
+  </div>
 
-<div class="graphics">
+  <div>
+    <h2>Ceaser Cipher Excercise</h2>
+      <p>Messege to encrypt:</p>
+        <input type="text" name="Message to encrypt" id="message"> <br /> <br />
+      <p>Shift Number:</p>
+        <input type="Text" name="shiftNum" id="shift">
+      <button onclick="cipher()">Try Me</button>
+      <p id="demo"></p>
+  </div>
+  
+  <!--Media Presentation-->
+  <div class="graphics">
     <h1 id="Header">Graphics and Media</h1>
-
+  <!--Canvas Tag-->
     <h2>Canvas</h2>
     <div class="box">
-        <p>Image to use:</p>
-        <img id="IDK" src="image.jpg" alt="I don't think you understand." width="220" height="277">
+      <p>Image to use:</p>
+      <img id="IDK" src="image.jpg" alt="I don't think you understand." width="220" height="277">
     </div>
 
     <div class="box float">
-        <p>Canvas to fill:</p>
-        <canvas id="myCanvas" width="824" height="575"
-            style="border:1px solid #d3d3d3;">
-            Your browser does not support the HTML5 canvas tag.
-        </canvas>
+      <p>Canvas to fill:</p>
+      <canvas id="myCanvas" width="824" height="575" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
 
-        <p><button onclick="myCanvas()">Try it</button></p>
+      <p><button onclick="myCanvas()">Try it</button></p>
     </div>
 
     <div class="smartBox">
-        <h2>SVG Graphic</h2>
-            <svg height="130" width="500">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%"
-                          style="stop-color:rgb(255,255,0);stop-opacity:1" />
-                        <stop offset="100%"
-                          style="stop-color:rgb(255,0,0);stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-                <text fill="#ffffff" font-size="45" font-family="Verdana"
-                  x="50" y="86">YES!</text>
-                Sorry, your browser does not support inline SVG.
-            </svg>
+    <!--SVG Tag-->  
+      <h2>SVG Graphic</h2>
+      <svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+          YES!
+        </text>
+        Sorry, your browser does not support inline SVG.
+      </svg>
     </div>
 
     <div class="smartBox">
-        <h2>Audio</h2>
-        <audio controls>
-            <source src="annex_motion turret_i see you.wav" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
+    <!--Audio Tag-->
+      <h2>Audio</h2>
+      <audio controls>
+      <source src="annex_motion turret_i see you.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
     </div>
 
     <div class="box">
-        <h2>Video</h2>
-        <video width="1280" height="720" controls>
-            <source src="big_buck_bunny.mp4" type="video/mp4">
-            <p>Your browser does not support the video tag.</p>
-        </video>
+    <!--Video Tag-->
+      <h2>Video</h2>
+      <video width="1280" height="720" controls>
+        <source src="big_buck_bunny.mp4" type="video/mp4">
+        <p>Your browser does not support the video tag.</p>
+      </video>
     </div>
 
     <div class="box">
-        <h2>Document</h2>
-        <p>
-            <a href="FieldsReport_Alopez.htm" target="_blank" title="Click here to open a Word document">Click here to open a Word document</a>
-        </p>
+    <!--Feilds Report-->
+      <h2>Document</h2>
+      <p>
+        <a href="FieldsReport_Alopez.htm" target="_blank" title="Click here to open a Word document">Click here to open a Word document</a>
+      </p>
     </div>
-</div>
+  </div>
   
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

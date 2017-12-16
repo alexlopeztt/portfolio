@@ -51,3 +51,28 @@ function myCanvas() {
     var img = document.getElementById("IDK");
     ctx.drawImage(img, 10, 10);
 }
+
+//Ceaser Cipher
+/* Takes any word or phrase and shifts all the letters by any given number */
+function cipher() {
+    var passcode = document.getElementById('message').value;
+    var shiftNum = document.getElementById('shift').value;
+    var shift = parseInt(shiftNum);
+    var encryptShow = "";
+
+    for (i = 0; i < passcode.length; i++) {
+        var encrypt = passcode.charCodeAt(i);
+        var add = encrypt + shift;
+        if (encrypt >= 65 && encrypt <= 90) {
+            var uprCase = (add - 65) % 26;
+            encryptShow += String.fromCharCode(uprCase + 65);
+        } else if (encrypt >= 97 && encrypt <= 122) {
+            var lwrCase = (add - 97) % 26;
+            encryptShow += String.fromCharCode(lwrCase + 97);
+        } else {
+            encryptShow += String.fromCharCode(encrypt);
+        }
+    }
+
+    document.getElementById("demo").innerHTML = encryptShow;
+}

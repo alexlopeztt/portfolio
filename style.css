@@ -72,3 +72,11 @@ img{
 .float{
     float: right;
 }
+
+#message{
+  display: box;
+}
+
+#shift{
+  display: box;
+}
