@@ -1,4 +1,4 @@
-ul{
+#navUl{
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
@@ -6,7 +6,7 @@ ul{
 	overflow: hidden;
 }
 
-li{
+#navLi{
 	float: left;
     display: block;
 }
@@ -23,7 +23,7 @@ li a:hover {
     background-color: #111;
 }
 
-img{
+#portrait{
 	display: inline-block;
 	float: left;
 	width: 400px;
