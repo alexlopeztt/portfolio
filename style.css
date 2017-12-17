@@ -1,4 +1,4 @@
-#navUl{
+.navUl{
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
@@ -6,7 +6,7 @@
 	overflow: hidden;
 }
 
-#navLi{
+.navLi{
 	float: left;
     display: block;
 }
